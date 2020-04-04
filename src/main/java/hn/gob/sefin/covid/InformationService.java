@@ -44,7 +44,7 @@ public class InformationService {
               .port(PORT);
         cacheManager = new RemoteCacheManager(builder.build());
 
-        cache = cacheManager.getCache("ingreso");
+        cache = cacheManager.getCache("default");
         
 		return (List<Ingreso>) cache.get("ingreso");
     }
@@ -60,7 +60,7 @@ public class InformationService {
               .port(PORT);
         cacheManager = new RemoteCacheManager(builder.build());
 
-        cache = cacheManager.getCache("ingreso");
+        cache = cacheManager.getCache("default");
         
 		return (List<Egreso>) cache.get("egreso");
     }
@@ -75,7 +75,7 @@ public class InformationService {
               .port(PORT);
         cacheManager = new RemoteCacheManager(builder.build());
 
-        cache = cacheManager.getCache("ingreso");
+        cache = cacheManager.getCache("default");
 
 		List<Ingreso> ingresos = new ArrayList<Ingreso>();
 		for(int i=0;i<100;i++) {
@@ -98,7 +98,7 @@ public class InformationService {
               .port(PORT);
         cacheManager = new RemoteCacheManager(builder.build());
 
-        cache = cacheManager.getCache("ingreso");
+        cache = cacheManager.getCache("default");
 		List<Egreso> egresos = new ArrayList<Egreso>();
         for(int i=0;i<100;i++) {
 			egresos.add(new Egreso("asdasda","dsadsada",Math.random()*10000));
