@@ -26,8 +26,8 @@ import hn.gob.sefin.covid.pojo.Ingreso;
 @Path("rest")
 public class InformationService {
 	
-	private static final String URL = "192.168.0.7";
-	private static final int PORT = 11222 ;
+	private static final String URL = System.getenv("DATA_GRID_SERVER");
+	private static final int PORT = Integer.valueOf(System.getenv("DATA_GRID_PORT"));
 
 
 	private RemoteCacheManager cacheManager;
